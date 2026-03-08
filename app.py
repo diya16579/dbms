@@ -95,4 +95,5 @@ def update(id):
 
     return render_template("edit.html", v=data)
 if __name__ == "__main__":
-    app.run(debug=True)
+
+    app.run()
