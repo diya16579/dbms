@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <link rel="stylesheet"href="{{url_for('static',filename='style.css')}}">
+    <title>View Vendors</title>
+</head>
+<body>
+
+<header style="background-color: #e6e6fa;">
+    <h1 class="header-title">Food Truck Finder System</h1>
+</header>
+<h2>Food Truck Vendors List</h2>
+
+<table border="1">
+
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Food</th>
+    <th>Location</th>
+    <th>Contact</th>
+    <th>Action</th>
+</tr>
+
+{% for v in vendors %}
+<tr>
+    <td>{{v[0]}}</td>
+    <td>{{v[1]}}</td>
+    <td>{{v[2]}}</td>
+    <td>{{v[3]}}</td>
+    <td>{{v[4]}}</td>
+    <td>
+        <a href="/edit/{{v[0]}}">Edit</a>
+        <a href="/delete/{{v[0]}}">Delete</a>
+    </td>
+</tr>
+{% endfor %}
+
+</table>
+ <br><br>
+    <a href="/">
+        <button>Back to Home</button>
+    </a>
+</body>
+</html>

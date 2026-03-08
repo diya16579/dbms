@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <link rel="stylesheet"href="{{url_for('static',filename='style.css')}}">
+<body>
+<header style="background-color: #e6e6fa;">
+    <h1 class="header-title">Food Truck Finder System</h1>
+</header>
+<h2>Edit Vendor</h2>
+
+<form action="/update/{{v[0]}}" method="POST">
+
+Name:
+<input type="text" name="vendor_name" value="{{v[1]}}"><br><br>
+
+Food:
+<input type="text" name="food_type" value="{{v[2]}}"><br><br>
+
+Location:
+<input type="text" name="location" value="{{v[3]}}"><br><br>
+
+Contact:
+<input type="text" name="contact" value="{{v[4]}}"><br><br>
+
+<input type="submit" value="Update">
+
+</form>
+
+</body>
+</head>
+</html>
